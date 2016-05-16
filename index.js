@@ -1,4 +1,4 @@
-function toRegex (str) {
+var toRegex = function (str) {
 	var string = str
 	var array = string.split('')
 	var regex = "/"
@@ -48,7 +48,7 @@ function toRegex (str) {
  		return regex
  }
 
-function escape(str) {
+var escape = function (str) {
 	var string = str
 	var array = string.split('')
 	var escaped = ''
@@ -97,5 +97,5 @@ function escape(str) {
 	 return escaped
 }
  
- exports.toRegex = toRegex()
- exports.escape = escape()
+ exports.toRegex = toRegex
+ exports.escape = escape
