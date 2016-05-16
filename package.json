@@ -1,0 +1,19 @@
+{
+  "name": "text2regex",
+  "version": "0.0.2",
+  "description": "Lib to create a regex based on a string.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coretool/text2regex.git"
+    },
+  "keywords": [
+    "regex",
+    "text"
+  ],
+  "author": "Coretool",
+  "license": "MIT"
+}
