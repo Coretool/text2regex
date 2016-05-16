@@ -8,37 +8,37 @@ function toRegex (str) {
 				regex += "\\\\"
 			break
 			case "[":
-				regex += "\["
+				regex += "\\["
 			break
 			case "/":
-				regex += "\/"
+				regex += "\\/"
 			break
 			case "^":
-				regex += "\^"
+				regex += "\\^"
 			break
 			case "$":
-				regex += "\$"
+				regex += "\\$"
 			break
 			case ".":
-				regex += "\."
+				regex += "\\."
 			break
 			case "|":
-				regex += "\|"
+				regex += "\\|"
 			break
 			case "?":
-				regex += "\$"
+				regex += "\\$"
 			break
 			case "*":
-				regex += "\*"
+				regex += "\\*"
 			break
 			case "+":
-				regex += "\+"
+				regex += "\\+"
 			break
 			case "(":
-				regex += "\("
+				regex += "\\("
 			break
 			case ")":
-				regex += "\)"
+				regex += "\\)"
 			break
 			default:
 				regex += array[i]
@@ -47,5 +47,55 @@ function toRegex (str) {
  		regex += "/"
  		return regex
  }
+
+function escape(str) {
+	var string = str
+	var array = string.split('')
+	var escaped = ''
+	for(var i = 0; i < array.length; i++) {
+		switch(array[i]) {
+			case "\\":
+				escaped += "\\\\"
+			break
+			case "[":
+				escaped += "\\["
+			break
+			case "/":
+				escaped += "\\/"
+			break
+			case "^":
+				escaped += "\\^"
+			break
+			case "$":
+				escaped += "\\$"
+			break
+			case ".":
+				escaped += "\\."
+			break
+			case "|":
+				escaped += "\\|"
+			break
+			case "?":
+				escaped += "\\$"
+			break
+			case "*":
+				escaped += "\\*"
+			break
+			case "+":
+				escaped += "\\+"
+			break
+			case "(":
+				escaped += "\\("
+			break
+			case ")":
+				escaped += "\\)"
+			break
+			default:
+				escaped += array[i]
+		 }
+	 }
+	 return escaped
+}
  
  exports.toRegex = toRegex()
+ exports.escape = escape()

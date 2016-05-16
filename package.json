@@ -1,6 +1,6 @@
 {
   "name": "text2regex",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Lib to create a regex based on a string.",
   "main": "index.js",
   "scripts": {
