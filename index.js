@@ -4,6 +4,8 @@ var toRegex = function (str) {
 	var regex = "/"
 	for(var i = 0; i < array.length; i++) {
 		switch(array[i]) {
+			case "\"":
+				regex += "\\\""
 			case "\\":
 				regex += "\\\\"
 			break
@@ -54,6 +56,8 @@ var escape = function (str) {
 	var escaped = ''
 	for(var i = 0; i < array.length; i++) {
 		switch(array[i]) {
+			case "\"":
+				escaped += "\\\""
 			case "\\":
 				escaped += "\\\\"
 			break
